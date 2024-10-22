@@ -1,8 +1,14 @@
 const employees = [
   {
     id: 1,
+    firstName: "John",
     email: "john.doe@example.com",
     password: "password123",
+    taskNumber: 3,
+    activeTasks: 2,
+    newTasks: 1,
+    completedTasks: 0,
+    failedTasks: 0,
     tasks: [
       {
         active: true,
@@ -39,8 +45,14 @@ const employees = [
   },
   {
     id: 2,
+    firstName: "Jane",
     email: "jane.smith@example.com",
     password: "password456",
+    taskNumber: 3,
+    activeTasks: 1,
+    newTasks: 1,
+    completedTasks: 1,
+    failedTasks: 0,
     tasks: [
       {
         active: true,
@@ -65,7 +77,7 @@ const employees = [
         category: "Documentation",
       },
       {
-        active: true,
+        active: false,
         newTask: false,
         completed: false,
         failed: false,
@@ -78,8 +90,14 @@ const employees = [
   },
   {
     id: 3,
+    firstName: "Alice",
     email: "alice.jones@example.com",
     password: "password789",
+    taskNumber: 3,
+    activeTasks: 1,
+    newTasks: 1,
+    completedTasks: 0,
+    failedTasks: 1,
     tasks: [
       {
         active: false,
@@ -117,8 +135,14 @@ const employees = [
   },
   {
     id: 4,
+    firstName: "Michael",
     email: "michael.brown@example.com",
     password: "password101",
+    taskNumber: 4,
+    activeTasks: 2,
+    newTasks: 1,
+    completedTasks: 1,
+    failedTasks: 0,
     tasks: [
       {
         active: true,
@@ -145,7 +169,7 @@ const employees = [
         active: false,
         newTask: false,
         completed: false,
-        failed: true,
+        failed: false,
         taskTitle: "Sales Pitch",
         taskDescription:
           "Prepare and present the sales pitch for a potential client.",
@@ -167,11 +191,17 @@ const employees = [
   },
   {
     id: 5,
+    firstName: "Emily",
     email: "emily.davis@example.com",
     password: "password202",
+    taskNumber: 4,
+    activeTasks: 1,
+    newTasks: 1,
+    completedTasks: 1,
+    failedTasks: 1,
     tasks: [
       {
-        active: true,
+        active: false,
         newTask: true,
         completed: false,
         failed: false,
