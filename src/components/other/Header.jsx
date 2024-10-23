@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
 import React from "react";
 import { useState } from "react";
 
-const Header = () => {
+const Header = ({ onChangeUser }) => {
   // const [userName, setUserName] = useState("");
   // if (!name) {
   //   setUserName("Admin");
@@ -13,7 +12,8 @@ const Header = () => {
 
   const logOutUser = () => {
     localStorage.setItem("loggedInUser", ""); //This just set loggedInUser to "".
-    window.location.reload(); //This is used to make browser reload.
+    // window.location.reload(); //This is used to make browser reload.
+    onChangeUser("");
   };
 
   return (

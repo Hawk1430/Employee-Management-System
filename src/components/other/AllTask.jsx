@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
 const AllTask = () => {
-  const authData = useContext(AuthContext);
+  const authData = useContext(AuthContext); //used this to get data of employees
   return (
     <div id="allTask" className="bg-[#1C1C1C] p-5 rounded mt-5 ">
       <div className="bg-red-400  py-2 px-4 flex justify-between mb-2 rounded">
