@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 
 const AllTask = () => {
-  const authData = useContext(AuthContext); //used this to get data of employees
+  const [userData, setUserData] = useContext(AuthContext); //used this to get data of employees
   return (
     <div id="allTask" className="bg-[#1C1C1C] p-5 rounded mt-5 ">
       <div className="bg-red-400  py-2 px-4 flex justify-between mb-2 rounded">
@@ -13,7 +13,7 @@ const AllTask = () => {
         <h5 className="text-lg font-medium  w-1/5">Completed </h5>
         <h5 className="text-lg font-medium  w-1/5">Failed</h5>
       </div>
-      {authData.employees.map((elem, idx) => {
+      {userData.map((elem, idx) => {
         return (
           <div
             className="border-2 border-emerald-500 mb-2  py-2 px-4 flex justify-between rounded"

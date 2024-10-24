@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
+import { AuthContext } from "../../context/AuthProvider";
 
 const CreateTask = () => {
   const [assignTo, setAssignTo] = useState("");
@@ -8,6 +9,8 @@ const CreateTask = () => {
   const [taskDescription, setTaskDescription] = useState("");
   const [category, setCategory] = useState("");
   const [newTask, setNewTask] = useState({});
+
+  const [userData, setUserData] = useContext(AuthContext);
 
   // const formHandler = (e) => {
   //   const { name, value } = e.target;
@@ -34,17 +37,20 @@ const CreateTask = () => {
       taskDescription,
       category,
     };
+
     setNewTask(newTaskObj);
-    const data = JSON.parse(localStorage.getItem("employees"));
+
+    const data = userData;
     data.forEach((elem) => {
       if (assignTo === elem.firstName) {
         elem.tasks.push(newTask);
+        elem.newTasks = elem.newTasks + 1;
         console.log(elem);
       }
     });
+    setUserData(data);
+    console.log(data);
 
-    setTaskTitle("");
-    setTaskDescription("");
     setAssignTo("");
     setCategory("");
     setTaskDate("");
